@@ -156,7 +156,7 @@ namespace CareNet_System.Migrations
                     b.HasOne("CareNet_System.Models.Patient", "patient")
                         .WithMany("bills")
                         .HasForeignKey("patient_id")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("patient");
@@ -167,13 +167,13 @@ namespace CareNet_System.Migrations
                     b.HasOne("CareNet_System.Models.Department", "department")
                         .WithMany("patients")
                         .HasForeignKey("dept_id")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("CareNet_System.Models.Staff", "staff")
                         .WithOne("patients")
                         .HasForeignKey("CareNet_System.Models.Patient", "followUp_doctorID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("department");
@@ -186,7 +186,7 @@ namespace CareNet_System.Migrations
                     b.HasOne("CareNet_System.Models.Department", "department")
                         .WithMany("staff")
                         .HasForeignKey("dept_id")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("department");

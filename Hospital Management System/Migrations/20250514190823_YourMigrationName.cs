@@ -75,7 +75,7 @@ namespace CareNet_System.Migrations
                         column: x => x.patient_id,
                         principalTable: "Patients",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
@@ -151,7 +151,7 @@ namespace CareNet_System.Migrations
                         column: x => x.dept_id,
                         principalTable: "Departments",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -172,7 +172,7 @@ namespace CareNet_System.Migrations
                         column: x => x.patient_id,
                         principalTable: "Patients",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -194,7 +194,7 @@ namespace CareNet_System.Migrations
                         column: x => x.official_id,
                         principalTable: "Staff",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
@@ -224,7 +224,7 @@ namespace CareNet_System.Migrations
                 column: "followUp_doctorID",
                 principalTable: "Doctors",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.NoAction);
         }
     }
 }
