@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CareNet_System.props" />
+</Project>
